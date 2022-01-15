@@ -1,0 +1,309 @@
+// --- Variables and data types --- //
+
+import 'dart:io';
+
+void main() {
+  var name = "Affan";
+  var roll = 20132;
+  var a = 7;
+  var b = 2;
+
+  // ---- to know the tyoe of typed variable ----
+
+  // print(name.runtimeType);
+  // print(roll.runtimeType);    //return type of variable
+
+  // ---- float division -----
+
+  // print(a / b);
+  // print(a ~/ b);       // ignore decimal value
+
+  // ---- Prefix and post fix incremebt and decrement ----
+
+  // print(a);
+  // print(++a);  // first evaluate then print
+  // print(a++);      // first print then evaluate
+  // print(a);
+
+// ---- type test operater ----
+
+  // print(name is String);        // return true
+  // print(roll is String);          // return false
+  // print(name is! String);          // is not
+
+  // ------ Conditional Expression ----
+
+  // var is_login = true;
+  // // ignore: dead_code
+  // var check = is_login ? 'Affan' : 'Unknown';  // is login agar true hoa to pahly wala warna second wala
+  // print(check);
+
+  // var result = name ?? "Guest";          // agar name may null hoa to (name = null) guest print hoga warna wo hi name
+  // print(result);
+
+// --------- String --------
+
+  // var value = "It's a language";
+  // var value1 = 'It\'s a language';     // Using escape sequence
+  // print(value);
+  // print(value1);
+
+  // -------- Expression inside string ------
+
+  // print("My name is $name");
+  // print("My name is ${name.toUpperCase()}");  // use {} agar koi expression bhi sat likhna hay to
+
+// ------- Row String -------
+
+  // print(r'this is $affan');   // koi bhi expression work nhi karta. as it is print ho jata
+
+  // -------- String properties and methods -------
+
+  // var lname = "   Minhas   ";
+
+  // print(name.length);
+  // print(name.isEmpty);
+  // print(name.isNotEmpty);
+  // print(name.toUpperCase());
+  // print(name.contains("a"));
+  // print(name.padLeft(10)); // padding from left
+  // print(lname.trim()); // remove white spaces
+  // print(lname.trimLeft());
+  // print(lname.trimRight());
+
+  // var cname = "Affan Minhas";
+  // print(cname.split(" ")); // Return list
+
+  // --------- List ----------
+
+  // ** Fixed lenght list **
+
+  // List<String> myList = new List(3);
+  // myList[0] = "Affan";
+  // print(myList);
+
+  // ** Growable List **
+
+  // var names = ["Affan", "Hasnain", "Waleed"];
+  // var rolls = [132, 83, 134];
+  // var sec = [132, "B", 83, "A", 134, "B"];
+  // print(names.runtimeType); // print String
+  // print(rolls.runtimeType); // print int
+  // print(sec.runtimeType); // print object
+
+  // --- specific data type ---
+
+  // var id = <int>[33, 44, 67];
+  // //id.add("Affan");      // through error
+  // print(id);
+
+  // ---- List into another list -----
+  //** Spread Operator ** \\
+
+  // var men = ["Affan", "Hasnain", "Kibriya"];
+  // var women = ["Elisa", "Cortona", "Siri"];
+  // var developers = ["Elon", ...men];        // men wali lis kay items ajay gen
+  // var team = [...men, ...women];
+  // print(developers);
+  // print(team);
+
+  // ----- list Constructor ---- Empty List -----
+
+  //var students = new List();        // nhi banany dera hay :( ... null safety issue
+  // var students = [];
+  // students.add("Sufyan");
+  // students.add("Rehman");
+  // print(students);
+
+  // ------- List Properties and methods -------
+
+  //var student = ["Affan", "Hasnain", "Waleed", "Moiz"];
+  // print(student.length);
+  // print(student.isEmpty);
+  // print(student.isNotEmpty);
+  // print(student.reversed);
+  // print(student.first);
+  // print(student.last);
+
+  // print(student.remove("Moiz"));   // remove the specific data
+  // print(student);
+
+  // student.removeAt(3);       // remove from the specific index
+  // print(student);
+
+  //--------- Set -----------
+
+  //var place = {"Karachi", "Lahore", "Islamabad"};
+  // var money = {200, 400, 600};
+  // var every = {"maldives", 30000};
+  // print(place.runtimeType);
+  // print(money.runtimeType);
+  // print(every.runtimeType);
+  // var k = <int>{300};
+  // k.add(3000);
+  // //k.add("Anday garam");          // Through error
+  // print(k);
+
+  // ------ different of writing Set -------
+
+  // var names = {};      // Not set it will become map
+  // var <String> names = {};
+  // var names = <String>{};
+  // Set <String> names = {};
+  // var names = new Set();
+  // var <String> names = Set();
+  // place.add("KPK");
+  // print(place);
+
+  // --- Set Contains Unique elements ---
+
+  // var values = {1, 3, 5, 6, 2, 1, 3};
+  // print(values); // eleminate similar one
+
+  // ------- Map --------
+
+  // var namee = {"harry": "Bhai", "azad": "Bhai"};
+  // print(namee.runtimeType);
+
+  // Map<String, String> address = {"lahore": "pakistan", "Karachi": "Pakistan"};
+  // print(address.runtimeType);
+
+  //   ** Empty Map Creation ** \\
+
+  // var val = Map(); // Empty map
+  // print(val.runtimeType);
+
+  // Map<String, int> clas = Map();
+  // print(clas.runtimeType);
+
+  // -------- Add item in the map  ------
+
+  // var book = {};
+  // book["Rich Dad"] = "Nepolean";
+  // book[10] = "Affan"; // dynamic hay is lye ho jae ga
+  // print(book);
+  // print(book[10]);     // Accessing values
+
+  // ---------- Map properties and methods --------
+
+  // var addresses = {"hyderabad": "Pak", "Karachi": "Sindh", "lahore": "Punjab"};
+  // print(addresses.length);
+  // print(addresses.keys);
+  // print(addresses.values);
+  // print(addresses.containsKey("kpk"));
+  // print(addresses.containsValue("Sindh"));
+
+// ----- Control Flow statements ------
+
+  // var id = 3;
+  // if (id == 3) {
+  //   print("Id found !!");
+  // } else {
+  //   print("Id not found !!");
+  // }
+
+  // var c = 9;
+  // if (c == 9) {
+  //   print("Given value is $c");
+  // } else if (c < 10) {
+  //   print("Given value is less than 10");
+  // } else if (c > 10) {
+  //   print("Given value is greater than 10");
+  // } else {
+  //   print("Invalid Value!!");
+  // }
+
+  // ------- Loops ----------
+
+  //   ** For Loop **   //
+
+  // var lst = ["Affan", "Hasnain", "Waleed"];
+  // var inc = 0;
+  // for (var i = 0; i < lst.length; i++) {
+  //   inc++;
+  //   print("$inc is ${lst[i]}");
+  // }
+
+  //   ** While Loop  **   //
+
+  // var i = 0;
+  // while (i < lst.length) {
+  //   ++inc;
+  //   print("$inc is ${lst[i]}");
+  //   i++;
+  // }
+
+  // ------ While True --------
+
+  // var data = true;
+  // while (data) {
+  //   print("Data Fetching.....");
+  // }
+
+// ------- Do While Loop ------
+
+  // var v = 9;
+  // do {
+  //   print("Number is now $v");
+  //   v--;
+  // } while (v > 0);
+
+  // ------ For-In Loop ------
+
+  // var lst = ["Affan", "Hasnain", "Sibtain"];
+  // for (var student in lst) {
+  //   print(student);
+  // }
+
+// ------ For-in loop in Map --------
+
+  // var datas = {132: "Affan", 83: "Hasnain", 134: "Waleed"};
+  // for (var keys in datas.keys) {
+  //   print(keys);
+  // }
+  // for (var value in datas.values) {
+  //   print(value);
+  // }
+
+  // ------  For Each Loop ------
+
+  // var lst = ["Affan", "Hasnain", "Sibtain"];
+  // lst.forEach((element) => print(element));
+
+  // var datas = {132: "Affan", 83: "Hasnain", 134: "Waleed"};
+  // datas.forEach((key, value) => print("$key = $value"));
+
+  // --------- for each loop in list to print index --------
+
+  // var lst = ["Affan", "Hasnain", "Sibtain"];
+  // lst.asMap().forEach((i, element) => print("Index $i and value is $element"));
+
+  // -------  Break and Continue  ---------
+
+  // var s = 0;
+  // while (true) {
+  //   s++;
+  //   if (s == 6) {
+  //     print("Fetching completed !!");
+  //     break;
+  //   }
+  //   if (s == 3) {
+  //     continue; // nichy nhi jae ga ab
+  //   }
+  //   print("Fetching data..... $s");
+  // }
+
+  // ------- Switch Case --------
+
+  // var number = 10;
+  // switch (number) {
+  //   case 8:
+  //     print("Lower value given");
+  //     break;
+  //   case 10:
+  //     print("Perfect !!");
+  //     break;
+  //   default:
+  //     print("Dosen't Exist");
+  // }
+}
